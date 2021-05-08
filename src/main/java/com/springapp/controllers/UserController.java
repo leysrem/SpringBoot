@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.springapp.dtos.UserDto;
-import com.springapp.entities.Book;
+
 import com.springapp.entities.Role;
 import com.springapp.entities.User;
 import com.springapp.services.RoleService;

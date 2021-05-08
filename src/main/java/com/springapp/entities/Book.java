@@ -61,7 +61,6 @@ public class Book extends BaseEntity{
 	public String toString() {
 		return "Book [name=" + name + ", nbrpages=" + nbrpages + ", price=" + price + ", user=" + user + "]";
 	}
-
 	
 
 

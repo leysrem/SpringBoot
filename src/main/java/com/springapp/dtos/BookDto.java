@@ -6,6 +6,7 @@ public class BookDto {
 	private String name;
 	private int nbrpages;
 	private double price;
+	private Long userId;
 	
 	
 
@@ -32,7 +33,16 @@ public class BookDto {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+ 
 	
 
 }

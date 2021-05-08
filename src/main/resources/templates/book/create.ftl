@@ -29,6 +29,15 @@
 					  </div>
 				  </div>
 				</div>
+				
+				<label for="firstname">Users</label>
+				<select name="userId">
+				  <option selected disabled>No Users</option>
+
+				    <option value="">Tom / Costumer </option>
+				    <option value="">Tom / Sellers </option>
+
+				</select> 
 
 				<div class="row text-right">
 			  		<div class="col-12">
