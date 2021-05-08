@@ -20,9 +20,6 @@ public class Book extends BaseEntity{
 	@Column(nullable = false)
 	private double price;
 
-	@ManyToOne(targetEntity = User.class, optional = true)
-    private User user;
-
 	public String getName() {
 		return name;
 	}
@@ -47,17 +44,9 @@ public class Book extends BaseEntity{
 		this.price = price;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
 	@Override
 	public String toString() {
-		return "Book [name=" + name + ", nbpages=" + nbrpages + ", price=" + price + ", user=" + user + "]";
+		return "Book [name=" + name + ", nbpages=" + nbrpages + ", price=" + price + "]";
 	}
 
 

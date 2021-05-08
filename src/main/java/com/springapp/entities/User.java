@@ -18,6 +18,9 @@ public class User extends BaseEntity {
 //    @OneToOne
     @ManyToOne
     private Role role;
+    
+    @ManyToOne
+    private Book book;
 
     public String getFirstname() {
         return firstname;
@@ -42,4 +45,14 @@ public class User extends BaseEntity {
     public void setRole(Role role) {
         this.role = role;
     }
+
+	public Book getBook() {
+		return book;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+    
+    
 }

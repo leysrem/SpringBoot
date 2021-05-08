@@ -19,6 +19,11 @@ public class UserService {
 	public List<User> findAll() {
 		return this.repository.findAll();
 	}
+	
+	public User findId(long id) {
+		return this.repository.findById(id).orElse(null);
+
+	}
 
 
 	public void generateUsers(final Integer nb) {

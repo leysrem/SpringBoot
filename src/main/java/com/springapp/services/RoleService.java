@@ -29,4 +29,15 @@ public class RoleService {
     public Role findRole(final Long roleId) {
         return this.repository.findById(roleId).orElse(null);
     }
+    
+    public void generateRoles() {
+    	Role seller = new Role();
+    	Role customer = new Role();
+    	
+    	seller.setName("seller");
+    	customer.setName("customer");
+    	
+    	this.repository.save(seller);
+    	this.repository.save(customer);
+    }
 }
