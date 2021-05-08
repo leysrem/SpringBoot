@@ -1,10 +1,12 @@
 package com.springapp.dtos;
 
+
 public class BookDto {
 
 	private String name;
 	private int nbrpages;
 	private double price;
+	
 	
 
 	public String getName() {
@@ -30,5 +32,7 @@ public class BookDto {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	
 
 }

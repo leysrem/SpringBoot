@@ -1,8 +1,11 @@
 package com.springapp.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User extends BaseEntity {
@@ -13,14 +16,13 @@ public class User extends BaseEntity {
     @Column(nullable = false)
     private String lastname;
 
-//    @ManyToMany
-//    @ManyToOne // -> @OneToMany
-//    @OneToOne
+
     @ManyToOne
     private Role role;
     
-    @ManyToOne
-    private Book book;
+    @OneToMany(mappedBy = "user")
+	private List<Book> books;
+
 
     public String getFirstname() {
         return firstname;
@@ -46,13 +48,15 @@ public class User extends BaseEntity {
         this.role = role;
     }
 
-	public Book getBook() {
-		return book;
+	public List<Book> getBooks() {
+		return books;
 	}
 
-	public void setBook(Book book) {
-		this.book = book;
+	public void setBooks(List<Book> books) {
+		this.books = books;
 	}
+
+
     
     
 }

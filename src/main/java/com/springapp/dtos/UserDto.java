@@ -5,6 +5,7 @@ public class UserDto {
     private String firstname;
     private String lastname;
     private Long roleId;
+    private Long bookId;
 
     public String getFirstname() {
         return firstname;
@@ -29,4 +30,15 @@ public class UserDto {
     public void setRoleId(Long roleId) {
         this.roleId = roleId;
     }
+
+	public Long getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(Long bookId) {
+		this.bookId = bookId;
+	}
+    
+    
+    
 }

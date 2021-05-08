@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.springapp.entities.Book;
 import com.springapp.entities.User;
 import com.springapp.repositories.UserRepository;
 
@@ -20,7 +21,7 @@ public class UserService {
 		return this.repository.findAll();
 	}
 	
-	public User findId(long id) {
+	public User findUser(long id) {
 		return this.repository.findById(id).orElse(null);
 
 	}
@@ -29,6 +30,7 @@ public class UserService {
 	public void generateUsers(final Integer nb) {
 		for (int i = 0; i < nb; i++) {
 			User user = new User();
+			Book book = new Book();
 			user.setFirstname("fname"+i);
 			user.setLastname("Lname"+i);
 

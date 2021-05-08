@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.springapp.dtos.BookDto;
 import com.springapp.entities.Book;
 
+
 @Controller
 @RequestMapping(BookController.BASE_ROUTE)
 public class BookController extends BaseCrudController<Book, Book> {
@@ -24,6 +25,5 @@ public class BookController extends BaseCrudController<Book, Book> {
     	
     	return book;
     }
-    
-    
+     
 }

@@ -1,5 +1,7 @@
 package com.springapp.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.springapp.dtos.UserDto;
+import com.springapp.entities.Book;
 import com.springapp.entities.Role;
 import com.springapp.entities.User;
 import com.springapp.services.RoleService;
@@ -30,6 +33,10 @@ public class UserController extends BaseCrudController<User, UserDto> {
 
     @Autowired
     private RoleService roleService;
+    
+   /* @Autowired	
+    private BookService bookService;*/
+    
 
     @GetMapping("testgen")
     public void testGen() {
@@ -39,6 +46,7 @@ public class UserController extends BaseCrudController<User, UserDto> {
     @Override
     protected void preCreateGet(final Model model) {
         model.addAttribute("roles", this.roleService.getTemplateList());
+        /*model.addAttribute("book", this.bookService.getTemplateList());*/
     }
 
     @Override
@@ -54,7 +62,19 @@ public class UserController extends BaseCrudController<User, UserDto> {
             }
             user.setRole(role);
         }
+        
 
-        return user;
-    }
+     /*   if (dto.getBookId() != null) {
+        	@SuppressWarnings("unchecked")
+			List<Book> books = (List<Book>) this.bookService.findBook(dto.getBookId());
+            if (books == null) {
+                throw new Exception("Cannot find whished role");
+            }
+            user.setBooks(books);
+        }*/
+
+        
+		return user;
+    }     
+       
 }

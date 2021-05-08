@@ -30,14 +30,4 @@ public class RoleService {
         return this.repository.findById(roleId).orElse(null);
     }
     
-    public void generateRoles() {
-    	Role seller = new Role();
-    	Role customer = new Role();
-    	
-    	seller.setName("seller");
-    	customer.setName("customer");
-    	
-    	this.repository.save(seller);
-    	this.repository.save(customer);
-    }
 }
